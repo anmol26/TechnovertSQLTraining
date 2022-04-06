@@ -1,13 +1,69 @@
---1. Select firstname, lastname, title, age, salary for everyone in your employee table. select * from [TechnovertSQLTraining].[dbo].[Employee];--2. Select firstname, age and salary for everyone in your employee table.select firstName, Age, Salary from [TechnovertSQLTraining].[dbo].[Employee];--3. Selct firstname and display as 'Name' for everyone in your employee tableselect firstName as 'Name' from [TechnovertSQLTraining].[dbo].[Employee];--4. Select firstname and lastname as 'Name' for everyone. Use " " (space) to separate firstname and last.select concat_ws(' ',firstname,lastname) as 'Name' from [TechnovertSQLTraining].[dbo].[Employee];--5. Select all columns for everyone with a salary over 38000select * from [TechnovertSQLTraining].[dbo].[Employee] where salary>38000;--6. Select first and last names for everyone that's under 24 years old. select firstname, lastname from [TechnovertSQLTraining].[dbo].[Employee] where age<24;--7. Select first name, last name, and salary for anyone with "Programmer" in their title. select firstname, lastname, salary from [TechnovertSQLTraining].[dbo].[Employee] where title = 'Programmer' ;--8. Select all columns for everyone whose last name contains "O". select * from [TechnovertSQLTraining].[dbo].[Employee] where lastname like '%o%' ;--9. Select the lastname for everyone whose first name equals "Kelly". select lastname from [TechnovertSQLTraining].[dbo].[Employee] where firstname = 'Kelly' ;--10. Select all columns for everyone whose last name ends in "Moore". select * from [TechnovertSQLTraining].[dbo].[Employee] where lastname like '%Moore' ;--11. Select all columns for everyone who are 35 and aboveselect * from [TechnovertSQLTraining].[dbo].[Employee] where age>=35 ;--12. Select firstname ,lastname,age and salary of everyone whose age is above 24 and below 43.select firstname, lastname, age, salary from [TechnovertSQLTraining].[dbo].[Employee] where age > 24 and age < 43 ;--13. Select firstname, title and lastname whose age is in the range 28 and 62 and salary greater than 31250select firstname, title, lastname from [TechnovertSQLTraining].[dbo].[Employee] where age between 28 and 62 and salary>31250 ;--14. Select all columns for everyone whose age is not more than 48 and salary not less than 21520select * from [TechnovertSQLTraining].[dbo].[Employee] where age<=48 and salary>=21520;--15. Select firstname and age of everyone whose firstname starts with "John" and salary in the range 25000 and 35000select firstname, age from [TechnovertSQLTraining].[dbo].[Employee] where firstname like 'John%' and salary between 25000 and 35000;--16. Select all columns for everyone by their ages in descending order.select * from [TechnovertSQLTraining].[dbo].[Employee] order by age desc;--17. Select all columns for everyone by their ages in ascending order.select * from [TechnovertSQLTraining].[dbo].[Employee] order by age;--18. Select all columns for everyone by their salaries in descending order.
-select * from [TechnovertSQLTraining].[dbo].[Employee] order by salary desc;
+--1. Select firstname, lastname, title, age, salary for everyone in your employee table
+select * from [TechnovertSQLTraining].[dbo].[Employee];
+
+--2. Select firstname, age and salary for everyone in your employee table
+select firstName, Age, Salary from [TechnovertSQLTraining].[dbo].[Employee];
+
+--3. Selct firstname and display as 'Name' for everyone in your employee table
+select firstName as 'Name' from [TechnovertSQLTraining].[dbo].[Employee];
+
+--4. Select firstname and lastname as 'Name' for everyone. Use " " (space) to separate firstname and last
+select concat_ws(' ',firstname,lastname) as 'Name' from [TechnovertSQLTraining].[dbo].[Employee];
+
+--5. Select all columns for everyone with a salary over 38000
+select * from [TechnovertSQLTraining].[dbo].[Employee] where salary>38000;
+
+--6. Select first and last names for everyone that's under 24 years old
+select firstname, lastname from [TechnovertSQLTraining].[dbo].[Employee] where age<24;
+
+--7. Select first name, last name, and salary for anyone with "Programmer" in their title
+select firstname, lastname, salary from [TechnovertSQLTraining].[dbo].[Employee] where title = 'Programmer' ;
+
+--8. Select all columns for everyone whose last name contains "O"
+select * from [TechnovertSQLTraining].[dbo].[Employee] where lastname like '%o%' ;
+
+--9. Select the lastname for everyone whose first name equals "Kelly". 
+select lastname from [TechnovertSQLTraining].[dbo].[Employee] where firstname = 'Kelly' ;
+
+--10. Select all columns for everyone whose last name ends in "Moore". 
+select * from [TechnovertSQLTraining].[dbo].[Employee] where lastname like '%Moore' ;
+
+--11. Select all columns for everyone who are 35 and above
+select * from [TechnovertSQLTraining].[dbo].[Employee] where age>=35 ;
+
+--12. Select firstname ,lastname,age and salary of everyone whose age is above 24 and below 43.
+select firstname, lastname, age, salary from [TechnovertSQLTraining].[dbo].[Employee] where age > 24 and age < 43 ;
+
+--13. Select firstname, title and lastname whose age is in the range 28 and 62 and salary greater than 31250
+select firstname, title, lastname from [TechnovertSQLTraining].[dbo].[Employee] where age between 28 and 62 and salary>31250 ;
+
+--14. Select all columns for everyone whose age is not more than 48 and salary not less than 21520
+select * from [TechnovertSQLTraining].[dbo].[Employee] where age<=48 and salary>=21520;
+
+--15. Select firstname and age of everyone whose firstname starts with "John" and salary in the range 25000 and 35000
+select firstname, age from [TechnovertSQLTraining].[dbo].[Employee] where firstname like 'John%' and salary between 25000 and 35000;
+
+--16. Select all columns for everyone by their ages in descending order.
+select * from [TechnovertSQLTraining].[dbo].[Employee] order by age desc;
+
+--17. Select all columns for everyone by their ages in ascending order.
+select * from [TechnovertSQLTraining].[dbo].[Employee] order by age;
+
+--18. Select all columns for everyone by their salaries in descending order.
+select * from [TechnovertSQLTraining].[dbo].[Employee] order by salary desc;
+
 --19. Select all columns for everyone by their salaries in ascending order.
-select * from [TechnovertSQLTraining].[dbo].[Employee] order by salary;
+select * from [TechnovertSQLTraining].[dbo].[Employee] order by salary;
+
 --20. Select all columns for everyone by their salaries in ascending order whose age not less than 17.
-select * from [TechnovertSQLTraining].[dbo].[Employee] where age>=17 order by salary ;
+select * from [TechnovertSQLTraining].[dbo].[Employee] where age>=17 order by salary ;
+
 --21. Select all columns for everyone by their salaries in descending order whose age not more than 34.
-select * from [TechnovertSQLTraining].[dbo].[Employee] where age<=34 order by salary desc ;
+select * from [TechnovertSQLTraining].[dbo].[Employee] where age<=34 order by salary desc ;
+
 --22. Select all columns for everyone by their length of firstname in ascending order.
-select * from [TechnovertSQLTraining].[dbo].[Employee] order by len(FirstName) asc;
+select * from [TechnovertSQLTraining].[dbo].[Employee] order by len(FirstName) asc;
+
 --23. Select the number of employees whose age is above 45
 select count(*) from [TechnovertSQLTraining].[dbo].[Employee] where age>45;
 
